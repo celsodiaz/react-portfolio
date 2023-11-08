@@ -43,10 +43,18 @@ const Welcome = () => {
       </div> */}
 
         <CustomLink className="social">
-          <a href="https://www.linkedin.com/in/celsodiaz8/">
+          <a
+            href="https://www.linkedin.com/in/celsodiaz8/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <i className="fa-brands fa-linkedin"></i>
           </a>
-          <a href="https://github.com/celsodiaz">
+          <a
+            href="https://github.com/celsodiaz"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <i className="fa-brands fa-github"></i>
           </a>
         </CustomLink>

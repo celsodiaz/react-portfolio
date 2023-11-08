@@ -1,14 +1,21 @@
 import { FaTerminal } from "react-icons/fa";
 import { SiRuby } from "react-icons/si";
 import { BsGithub } from "react-icons/bs";
+import { BsBoxArrowUpRight } from "react-icons/bs";
 import styled from "@emotion/styled";
+
+const ContainerCard = styled.article`
+  position: relative; /* Establece el contenedor como posición relativa */
+  background-color: lightgray;
+  padding: 20px;
+`;
 
 const CustomUl = styled.ul`
   display: flex;
   gap: 10px;
 `;
 
-const CustomLi = styled.li`
+const CustomTec = styled.li`
   list-style: none;
   width: 50px;
   height: 50px;
@@ -28,26 +35,70 @@ const CustomLi = styled.li`
   } */
 `;
 
+const CustomLink = styled.div`
+  width: 50px;
+  height: 50px;
+  display: block;
+  text-align: center;
+  font-size: 35px;
+  margin: 0 6.5px;
+  border-radius: 20%;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  .icon {
+    display: block;
+    cursor: pointer;
+    color: #000;
+    transition: color 0.3s;
+    &:hover {
+      color: #0077b5; /* Cambia el color del ícono cuando el cursor está sobre él */
+    }
+  }
+`;
+const ListTec = styled.div`
+  display: flex;
+  gap: 20px;
+  p {
+    border-radius: 20px;
+    padding: 5px;
+    background-color: aqua;
+  }
+`;
 const Card = () => {
   return (
-    <article>
+    <ContainerCard>
       <div>
         <CustomUl>
-          <CustomLi>
+          <CustomTec>
             <FaTerminal style={{ color: "#0077b5" }} />
-          </CustomLi>
-          <CustomLi>
+          </CustomTec>
+          <CustomTec>
             <SiRuby style={{ color: "#0077b5" }} />
-          </CustomLi>
-          <CustomLi>
+          </CustomTec>
+          <CustomTec>
             <BsGithub style={{ color: "#0077b5" }} />
-          </CustomLi>
+          </CustomTec>
         </CustomUl>
       </div>
-      <div></div>
-      <div></div>
-      <div></div>
-    </article>
+      <CustomLink>
+        <BsBoxArrowUpRight className="icon" />
+      </CustomLink>
+      <div>
+        <h2>Get Home</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Esse optio
+          deleniti iste omnis non quo provident quam quae, molestias sequi vitae
+          voluptates dolorum culpa consequatur ipsam at aut, assumenda et?
+        </p>
+      </div>
+      <ListTec>
+        <p>JavaScript</p>
+        <p>React</p>
+        <p>Google Maps</p>
+        <p>Vite</p>
+      </ListTec>
+    </ContainerCard>
   );
 };
 
