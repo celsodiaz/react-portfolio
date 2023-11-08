@@ -1,33 +1,38 @@
-import styled from "@emotion/styled";
-
-const Container = styled.header`
-  width: 100%;
-  height: 3em;
-  /* position: fixed; */
-  top: 0;
-  background-color: cyan;
-  align-items: center;
-`;
-
-const SectionContainer = styled.section`
-  display: flex;
-  /* justify-content: space-between; */
-  margin: 0 auto;
-  /* align-items: center; */
-`;
+import { useState } from "react";
 
 const Header = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
   return (
-    <Container>
-      <SectionContainer>
-        <div>LOGO</div>
-        <div>
-          <a href="#about">Experiencia</a>
-          <a href="#proyectos">Proyectos</a>
-          <a href="#contacted">Contact me</a>
+    <header>
+      <div className="logo">
+        <i className="fa-solid fa-c"></i>
+        <div className="logo-text">Celso Diaz</div>
+      </div>
+      <nav>
+        <div
+          className={`togglebtn ${isMenuOpen ? "click" : ""}`}
+          onClick={toggleMenu}
+        >
+          <span></span>
+          <span></span>
+          <span></span>
         </div>
-      </SectionContainer>
-    </Container>
+        <ul className={`navlinks ${isMenuOpen ? "open" : ""}`}>
+          <li>
+            <a href="#">Portfolio</a>
+          </li>
+          <li>
+            <a href="#">About</a>
+          </li>
+          <li>
+            <a href="#">Contact</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
   );
 };
 
