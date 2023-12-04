@@ -8,58 +8,94 @@ const CustomLink = styled.div`
   gap: 20px;
 `;
 
+const CustomSectionSalute = styled.section`
+  padding: 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+
+  .mensaje {
+    position: relative;
+  }
+
+  .date {
+    display: flex;
+    justify-content: center;
+  }
+
+  @media (max-width: 450px) {
+    display: flex;
+    flex-direction: column;
+    padding-top: 50px;
+    gap: 50px;
+    .mensaje {
+      order: -1;
+    }
+
+    .imagen {
+      margin: auto;
+    }
+  }
+`;
+
+const CustomImage = styled.div`
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 10px solid #444;
+  box-shadow: 5px 7px 25px rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  grid-area: 1/1/3/2;
+  & > img {
+    max-height: 100%;
+    transition: 0.5s;
+    transform: scale(1.35);
+  }
+`;
+
 const Welcome = () => {
   return (
-    <section className="container">
-      <div className="hero-pic">
+    <CustomSectionSalute className="contenedor">
+      <CustomImage className="imagen">
         <img src={hero} alt="profile" />
-      </div>
-      <div className="hero-text">
+      </CustomImage>
+      <div className="mensaje">
         <Message />
-        <div className="text">
-          <p>
-            I’m <span>Celso Diaz</span>,
-            <br />
-            IT Systems Engineer,
-            <br />
-            Full Stack Web Developer.
-          </p>
-        </div>
-        {/* <div className="btn-group">
-        <a
-          href="../public/Celso-Diaz-cv.pdf"
-          className="btn active"
-          download
-        >
-          Download CV
-        </a>
-        <a
-          href="https://www.linkedin.com/in/celsodiaz8/"
-          className="btn"
-          target="blank"
-        >
-          Contact
-        </a>
-      </div> */}
-
-        <CustomLink className="social">
-          <a
-            href="https://www.linkedin.com/in/celsodiaz8/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <i className="fa-brands fa-linkedin"></i>
-          </a>
-          <a
-            href="https://github.com/celsodiaz"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <i className="fa-brands fa-github"></i>
-          </a>
-        </CustomLink>
       </div>
-    </section>
+      <div className="date">
+        <div className="hero-text">
+          <div className="text">
+            <p>
+              I’m <span>Celso Diaz</span>,
+              <br />
+              IT Systems Engineer,
+              <br />
+              Full Stack Web Developer.
+            </p>
+          </div>
+
+          <CustomLink className="social">
+            <a
+              href="https://www.linkedin.com/in/celsodiaz8/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <i className="fa-brands fa-linkedin"></i>
+            </a>
+            <a
+              href="https://github.com/celsodiaz"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <i className="fa-brands fa-github"></i>
+            </a>
+          </CustomLink>
+        </div>
+      </div>
+    </CustomSectionSalute>
   );
 };
 

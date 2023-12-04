@@ -35,13 +35,16 @@ const changeKeyframes = keyframes`
 // Define styled components with keyframes
 const ContentAnimation = styled.div`
   position: absolute;
-  top: 200px;
-  height: 160px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
   overflow: hidden;
   font-family: "Lato", sans-serif;
   font-size: 35px;
-  line-height: 40px;
+
   color: white;
+  z-index: 2;
 `;
 
 const ContentContainer = styled.div`

@@ -4,7 +4,7 @@ const CustomSectionAbout = styled.section`
   /* color: white; */
   width: 100%; /* Cambiar el ancho al 100% para adaptarse al ancho de la pantalla */
   max-width: 95%;
-  margin: 30px auto;
+  margin: 30px auto 0px auto;
   padding: 20px;
   display: grid;
   grid-template-columns: 75% 25%;
@@ -13,7 +13,7 @@ const CustomSectionAbout = styled.section`
 
 const About = () => {
   return (
-    <CustomSectionAbout>
+    <CustomSectionAbout id="about">
       <div>
         <h2>About</h2>
         <p>

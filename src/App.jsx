@@ -7,10 +7,8 @@ import Welcome from "./components/Welcome";
 function App() {
   return (
     <div className="hero-header">
-      <div className="wrapper">
-        <Header />
-        <Welcome />
-      </div>
+      <Header />
+      <Welcome />
       <Projects />
       <About />
     </div>
