@@ -42,7 +42,7 @@ const ContentAnimation = styled.div`
   overflow: hidden;
   font-family: "Lato", sans-serif;
   font-size: 35px;
-
+  height: 80px;
   color: white;
   z-index: 2;
 `;

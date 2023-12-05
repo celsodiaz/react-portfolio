@@ -5,9 +5,13 @@ import { BsBoxArrowUpRight } from "react-icons/bs";
 import styled from "@emotion/styled";
 
 const ContainerCard = styled.article`
-  position: relative; /* Establece el contenedor como posición relativa */
+  position: relative;
   background-color: lightgray;
   padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  border-radius: 10px;
 `;
 
 const CustomUl = styled.ul`
@@ -44,8 +48,8 @@ const CustomLink = styled.div`
   margin: 0 6.5px;
   border-radius: 20%;
   position: absolute;
-  top: 10px;
-  right: 10px;
+  top: 20px;
+  right: 0;
   .icon {
     display: block;
     cursor: pointer;
@@ -58,7 +62,8 @@ const CustomLink = styled.div`
 `;
 const ListTec = styled.div`
   display: flex;
-  gap: 20px;
+  gap: 15px;
+  flex-wrap: wrap;
   p {
     border-radius: 20px;
     padding: 5px;

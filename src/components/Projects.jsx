@@ -18,13 +18,12 @@ const CustomSection = styled.section`
     overflow-x: auto; /* Agregar desplazamiento horizontal si es necesario */
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: 500px) {
     .items {
       display: grid;
-      grid-template-columns: 1fr;
+      grid-template-columns: minmax(270px, 1fr);
       gap: 20px;
-      padding: 0 20px;
-      overflow-x: auto; /* Agregar desplazamiento horizontal en dispositivos móviles */
+      margin: auto;
     }
   }
 `;
@@ -34,9 +33,14 @@ const CustomTitle = styled.div`
   padding: 20px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
   text-align: center;
+  & > h2 {
+    color: #007ced;
+  }
+
+  & > p {
+    color: white;
+  }
 `;
 
 const Projects = () => {

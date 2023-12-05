@@ -9,6 +9,7 @@ const CustomLink = styled.div`
 `;
 
 const CustomSectionSalute = styled.section`
+  height: 75vh;
   padding: 20px;
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -23,10 +24,13 @@ const CustomSectionSalute = styled.section`
     justify-content: center;
   }
 
+  .imagen {
+    margin: auto;
+  }
   @media (max-width: 450px) {
     display: flex;
     flex-direction: column;
-    padding-top: 50px;
+    padding-top: 60px;
     gap: 50px;
     .mensaje {
       order: -1;
@@ -58,7 +62,7 @@ const CustomImage = styled.div`
 
 const Welcome = () => {
   return (
-    <CustomSectionSalute className="contenedor">
+    <CustomSectionSalute>
       <CustomImage className="imagen">
         <img src={hero} alt="profile" />
       </CustomImage>
