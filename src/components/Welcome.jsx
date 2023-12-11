@@ -9,8 +9,11 @@ const CustomLink = styled.div`
 `;
 
 const CustomSectionSalute = styled.section`
-  height: 75vh;
+  background-image: url("/public/mar.jpg");
+  background-size: cover;
+  height: 85vh;
   padding: 20px;
+  padding-top: 60px;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
@@ -47,7 +50,7 @@ const CustomImage = styled.div`
   height: 300px;
   border-radius: 50%;
   overflow: hidden;
-  border: 10px solid #444;
+  border: 10px solid #324c4b;
   box-shadow: 5px 7px 25px rgba(0, 0, 0, 0.5);
   display: flex;
   justify-content: center;

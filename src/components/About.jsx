@@ -58,7 +58,7 @@ const StyledIcon = styled(IoIosMore)`
 
 const About = () => {
   return (
-    <CustomSectionAbout>
+    <CustomSectionAbout id="about">
       <div className="about">
         <h2>About</h2>
         <p>

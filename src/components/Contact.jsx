@@ -1,10 +1,14 @@
 import styled from "@emotion/styled";
 
 const ContainerContact = styled.section`
-  background-color: white;
   height: 180px;
   padding: 40px;
   text-align: center;
+  background-color: #3f5b64;
+
+  & > h2 {
+    color: aliceblue;
+  }
 `;
 
 const Contact = () => {
